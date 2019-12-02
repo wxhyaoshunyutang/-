@@ -1,0 +1,20 @@
+#include<stdio.h>            //约瑟夫环问题简洁求法
+int fun1(int n,int m)
+{
+    if(n==1)
+    {
+        return 1;
+    }
+    else
+    {
+        return(fun1(n-1,m)+m-1)%n+1;//是为了求一开始的编（每次编号都在发生变化）
+    }
+}
+
+int main()
+{
+    int a;
+    a=fun1(1,3);
+    printf("%d",a);
+    return 0;
+}
